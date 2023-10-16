@@ -1,0 +1,40 @@
+/* styles.css */
+
+body {
+    text-align: center;
+    background: linear-gradient(to bottom, #0074E4, #ffffff);
+    font-family: Arial, sans-serif; 
+}
+
+h1 {
+    font-size: 24px;
+    color: #333; /*color del encabezado */
+    background-color: #f8f8f8; /* Color de fondo encabezado */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#image-container {
+    margin: 20px auto;
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    overflow: hidden;
+}
+
+#uploaded-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#recognized-text {
+    font-weight: bold;
+    font-size: 18px; /* Cambia el tamaño del texto reconocido según tus preferencias */
+    color: #fff; /* Cambia el color del texto reconocido según tus preferencias */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el texto reconocido */
+    padding: 10px;
+    border-radius: 5px;
+}

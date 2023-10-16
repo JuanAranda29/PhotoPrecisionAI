@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Subir y reconocer imagen</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+</head>
+<body>
+    <h1>Subir y reconocer imagen</h1>
+    <input type="file" id="image-input" accept="image/*">
+    <div id="image-container">
+        <img id="uploaded-image" src="#" alt="Imagen subida">
+    </div>
+    <button id="recognize-button">Reconocer imagen</button>
+    <div id="recognized-text"></div>
+
+    <script>
+        const imageInput = document.getElementById('image-input');
+        const uploadedImage = document.getElementById('uploaded-image');
+        const recognizeButton = document.getElementById('recognize-button');
+        const recognizedText = document.getElementById('recognized-text');
+
+        imageInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const imageURL = URL.createObjectURL(file);
+                uploadedImage.src = imageURL;
+                recognizedText.innerText = '';
+            }
+        });
+
+        recognizeButton.addEventListener('click', () => {
+            // Aquí se pondrá la lógica para el proceso de reconocimiento de la imagen subida
+        });
+    </script>
+</body>
+</html>
